@@ -3,7 +3,7 @@ import { IContent } from "./icontent";
 export class ContentList {
   private _chess: IContent[];
 
-  constructor(chess: IContent) {
+  constructor() {
     this._chess = [];
   }
 
@@ -11,7 +11,7 @@ export class ContentList {
     return this._chess;
   }
 
-  addChess(chessToAdd: IContent) {
+  addChess(chessToAdd: IContent): void {
     this._chess.push(chessToAdd);
   }
 
