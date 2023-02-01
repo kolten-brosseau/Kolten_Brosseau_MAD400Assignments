@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.angular",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\content-list",
+    "\\src\\app\\content-list-item",
     "\\src\\app\\models"
   ],
+  "SelectedNode": "\\src\\app\\content-list\\content-list.component.ts",
   "PreviewInSolutionExplorer": false
 }

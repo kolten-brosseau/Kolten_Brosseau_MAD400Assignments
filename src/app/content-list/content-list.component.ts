@@ -6,16 +6,17 @@ import { IContent } from '../models/icontent';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-
-
-
 export class ContentListComponent {
-  playersArray: IContent[] = [{
-    id: 0,
-    title: "Magnus Carlsen",
-    author: "Kolten Brosseau",
-    type: "Person"
-  },
+
+  playersArray: IContent[];
+
+  constructor() {
+    this.playersArray = [{
+      id: 0,
+      title: "Magnus Carlsen",
+      author: "Kolten Brosseau",
+      type: "Person"
+    },
     {
       id: 1,
       title: "Anish Giri",
@@ -33,5 +34,7 @@ export class ContentListComponent {
       title: "Gary Kasparov",
       author: "Kolten Brosseau",
       type: "Person"
-    }  ]
+    }];
+  }
+
 }
