@@ -10,8 +10,8 @@ export class ChessPlayerService {
 
   constructor() { }
 
-getContent(): Observable<IContent[]>{
-  return of(playersArray);
+getContent(): IContent[]{
+  return playersArray;
 }
 
 }

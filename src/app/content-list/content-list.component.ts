@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { IContent } from '../models/icontent';
+import { ChessPlayerService } from '../services/chess-player.service';
 
 @Component({
   selector: 'app-content-list',
@@ -8,6 +9,14 @@ import { IContent } from '../models/icontent';
 })
 export class ContentListComponent {
 
+  ChessPlayers: IContent[] = [];
+
+  constructor(private service: ChessPlayerService){
+    
+  } 
   
+  ngOnInit(){
+    this.ChessPlayers = this.service.getContent();
+  }
 
 }
