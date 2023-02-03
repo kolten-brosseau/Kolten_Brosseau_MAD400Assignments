@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { IContent } from '../models/icontent';
 
-var playersArray: IContent[] = [{
+export const playersArray: IContent[] = [{
       id: 0,
       title: "Magnus Carlsen",
       author: "Kolten Brosseau",
@@ -26,4 +26,3 @@ var playersArray: IContent[] = [{
       author: "Kolten Brosseau",
       type: "Person"
     }];
-  }
