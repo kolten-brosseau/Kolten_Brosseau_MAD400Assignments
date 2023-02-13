@@ -1,4 +1,5 @@
 import { Component, NgModule, OnInit } from '@angular/core';
+import { playersArray } from '../data/mock-content';
 import { IContent } from '../models/icontent';
 import { ChessPlayerService } from '../services/chess-player.service';
 
@@ -7,7 +8,7 @@ import { ChessPlayerService } from '../services/chess-player.service';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent {
+export class ContentListComponent implements OnInit{
 
   ChessPlayers: IContent[] = [];
 
@@ -16,7 +17,7 @@ export class ContentListComponent {
   } 
   
   ngOnInit(){
-    this.ChessPlayers = this.service.getContent();
+    this.service.getContent().subscribe(ChessPlayers => this.ChessPlayers = playersArray);
   }
 
 }

@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IContent } from './models/icontent';
+import { ContentListComponent } from './content-list/content-list.component';
+import { ContentListItemComponent } from './content-list-item/content-list-item.component';
+import { ChessPlayerService } from './services/chess-player.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,9 +12,20 @@ import { IContent } from './models/icontent';
 })
 
 
+export class AppComponent implements OnInit{
+  singlePlayer? : IContent;
+  constructor(private service: ChessPlayerService){
 
-export class AppComponent {
-  
+  } 
+
+  ngOnInit(): void{
+    this.service.getIndex(1).subscribe((player: IContent)=>{
+      this.singlePlayer = player
+    });
+  }
+
+//service.getIndex(1)
+
   }
 
  
