@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes } from '@angular/router';
+import { ContentList } from './models/content-list';
 
 
 
@@ -9,4 +11,24 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule { 
+   
+}
+
+const routes: Routes = [
+    {
+      path: "/content",
+      component: ContentList 
+    },
+    {
+      path: "",
+      redirectTo: "/content",
+      pathMatch: 'full'
+    },
+    {
+      path: "/content/"
+    }
+]
+
+
