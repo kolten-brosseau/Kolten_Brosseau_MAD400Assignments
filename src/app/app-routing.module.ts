@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContentList } from './models/content-list';
 import { ContentListComponent } from './content-list/content-list.component';
 import { IContentDetailsComponent } from './icontent-details/icontent-details.component';
+import { ContentListItemSearchComponent } from './content-list-item-search/content-list-item-search.component';
+import { ChessPlayerService } from './services/chess-player.service';
+import {IContent} from './models/icontent';
 
 const routes: Routes = [
   {
@@ -18,6 +21,10 @@ const routes: Routes = [
   {
     path: "content/:id",
     component: IContentDetailsComponent
+  },
+  {
+    path: "content/search",
+    component: ContentListItemSearchComponent
   }
   
   
@@ -33,7 +40,9 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { 
-   
+  
+
+
 }
 
 
